@@ -3,6 +3,12 @@ import Image from 'next/image'
 import client from '../client'
 import styles from '../styles/Home.module.scss'
 
+import Hero from '../components/sections/Hero'
+import About from '../components/sections/About'
+import Projects from '../components/sections/Projects'
+import Contact from '../components/sections/Contact'
+
+
 
 
 import { useState } from 'react'
@@ -27,7 +33,10 @@ export async function getStaticProps() {
 export default function Home({ projects }) {
   return (
     <div>
-
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   )
 }
