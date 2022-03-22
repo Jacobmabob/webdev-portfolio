@@ -1,11 +1,13 @@
-import React from 'react'
-import styles from '../../styles/sections/Hero.module.scss'
-
+import React from "react";
+// import globalStyles from '../../styles/globals.scss'
 
 const Hero = () => {
   return (
-    <div className={styles.container}>Hero</div>
+    <section className='app__container'>
+        <div className="flex__item">Hero</div>
+    </section>
   )
-}
 
-export default Hero
+};
+
+export default Hero;

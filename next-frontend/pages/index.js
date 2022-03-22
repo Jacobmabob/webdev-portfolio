@@ -3,6 +3,8 @@ import Image from 'next/image'
 import client from '../client'
 import styles from '../styles/Home.module.scss'
 
+import Navbar from '../components/Navbar'
+
 import Hero from '../components/sections/Hero'
 import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
@@ -32,11 +34,12 @@ export async function getStaticProps() {
 
 export default function Home({ projects }) {
   return (
-    <div>
+    <main className='app__wrapper'>
+      <Navbar />
       <Hero />
       <About />
       <Projects />
       <Contact />
-    </div>
+    </main>
   )
 }

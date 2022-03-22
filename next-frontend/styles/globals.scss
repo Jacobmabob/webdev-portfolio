@@ -31,7 +31,22 @@ a {
 }
 
 
-.container {
+.app__container {
   min-height: 100vh;
-  margin: 0 auto; 
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem 4rem;
+
+  @media screen and (max-width: 450px) {
+    padding: 2rem 2rem;
+  }
+}
+
+.flex__item {
+  flex: 1;
 }

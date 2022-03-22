@@ -2,7 +2,12 @@ import React from 'react'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <section className='app__container'>
+        <div className='flex__item'>Project 1</div>
+        <div className='flex__item'>Project 2</div>
+        <div className='flex__item'>Project 3</div>
+    </section>
+
   )
 }
 
