@@ -12,6 +12,8 @@
   --brown-color: #46364a;
   --white-color: #ffffff;
 
+
+
 }
 
 html,
@@ -42,11 +44,17 @@ a {
 
   padding: 4rem 4rem;
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 800px) {
     padding: 2rem 2rem;
+    flex-direction: column;
   }
 }
 
 .flex__item {
   flex: 1;
+}
+
+.head-text {
+  font-size: 2.75rem;
+  font-weight: 800;
 }

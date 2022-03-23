@@ -38,7 +38,7 @@ export default function Home({ projects }) {
       <Navbar />
       <Hero />
       <About />
-      <Projects />
+      <Projects projectData={projects}/>
       <Contact />
     </main>
   )
