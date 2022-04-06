@@ -4,15 +4,23 @@
   align-items: center;
 
   position: fixed;
+  z-index: 1;
   width: 100%;
   padding: 1rem 4rem;
 
-  background: rgba(255, 255, 255, 0.25);
+  // background: rgba(255, 255, 255, 0.25);
+  background: var(--secondary-color);
+  // opacity: 0.9;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 
-  @media screen and (max-width: 450px) {
-    padding: 1rem 2rem;
+  @media screen and (max-width: 700px) {
+    padding: 1rem 1rem;
   }
+}
+
+.logo {
+  font-family: var(--font-logo);
+  font-size: 2rem;
 }

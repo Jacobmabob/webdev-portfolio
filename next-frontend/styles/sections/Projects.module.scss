@@ -1,12 +1,23 @@
-.card__container {
+.projects__container {
+  flex: 1;
+  display: flex;
+  min-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+.card__wrapper {
+  min-width: 100%;
   font-size: 2.75rem;
   font-weight: 800;
 }
 
 .card {
   color: #090c08;
-
-  width: 450px;
+  position: relative;
+  margin: 4rem 0;
 
   display: flex;
   justify-content: flex-start;
@@ -16,19 +27,19 @@
 
 .card__header {
   position: relative;
+  display: block;
 
-  .project__img {
+  .image__wrapper > span {
     border-radius: 10px;
-    max-width: 100%;
-    // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    width: 100%;
+    max-width: 300px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  
   }
-
   .github__link {
     position: absolute;
     right: 40px;
     bottom: -20px;
-    z-index: 2;
 
     display: flex;
     justify-content: center;
@@ -46,13 +57,14 @@
 
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 
-    // height: 50px;
-    // width: 50px
   }
+
 }
 
+
 .card__body {
-  padding: 1rem;
+  padding: 1rem 0rem;
+  min-height: 270px;
 
   h1 {
     margin-bottom: 0;
@@ -74,41 +86,12 @@
   }
 }
 
-.tags {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-  font-size: 0.9em;
-  font-weight: 100;
 
-  .tech {
-    font-family: "Roboto", monospace;
-    background: #cdcfc9;
-    margin: 0 0.2em;
-    padding: 0.1em 0.3em;
-    border-radius: 4px;
-    color: #55564d;
-  }
-
-  .github-link {
-    border-bottom: 1px solid white;
-  }
-
-  .icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .icon {
-      margin: 0 0.5em;
-    }
-  }
-}
 
 .card__footer {
   width: 100%;
   font-family: "Roboto", monospace;
-  font-size: 0.9em;
+  font-size: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,14 +101,42 @@
   }
 
   a {
-    // font-size: .9em;
+    font-size: 1.2em;
     margin: 0;
     text-decoration: none;
     display: flex;
     align-items: center;
     color: #55564d;
 
-    // border-bottom: 2px solid #55564D
+  }
+
+  .tech__container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 100;
+  
+    .tech {
+      font-family: var(--font-mono);
+      font-weight: 300;
+      background: #cdcfc9;
+      margin: 0 0.2em;
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+      color: #31312d;
+    }
+  }
+
+  .site__link {
+    display: flex;
+    align-items: center;
+    padding: 0.1em 0.3em;
+
+    p {
+      margin-bottom: 3px;
+      margin-left: 4px;
+    }
   }
 
 }
@@ -133,14 +144,3 @@
 
 
 
-.site__link {
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-
-  padding: 0.1em 0.3em;
-  p {
-    margin-bottom: 3px;
-    margin-left: 4px;
-  }
-}

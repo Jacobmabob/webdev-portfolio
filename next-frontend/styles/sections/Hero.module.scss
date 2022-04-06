@@ -1,8 +1,31 @@
-.container {
-    min-height: 100vh;
-    margin: 0 auto;
-
+.hero__container {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
+
+    min-width: 100%;
+    // background: var(--secondary-color);
+    // color: var(--white-color);
+
+    p {
+        margin: 0;
+    }
+
+    .text__small {
+        font-size: 1.3rem;
+    }
+
+    .text__med {
+        font-size: 2rem;
+    }
+
+
+    span {
+        font-size: 3.5rem;
+    }
+
+
 }
+
+
