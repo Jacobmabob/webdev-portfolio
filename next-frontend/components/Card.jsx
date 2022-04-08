@@ -59,7 +59,7 @@ const Card = ({ projectData }) => {
               ))}
             </div>
             <a href="#">
-              <IconContext.Provider value={{ size: "1em" }}>
+              <IconContext.Provider value={{ size: ".7em" }}>
                 <motion.div
                   className={styles.site__link}
                   style={{ color: "#B41825" }}

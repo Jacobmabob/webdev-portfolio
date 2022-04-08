@@ -13,6 +13,11 @@
   --brown-color: #46364a;
   --white-color: #ffffff;
 
+  --screen-sm: 375px;
+  --screen-tablet: 768px;
+  --screen-laptop: 1024px;
+  --screen-desktop: 2560px;
+
 
 
 }
@@ -56,6 +61,7 @@ a {
 
 .flex__item {
   flex: 1;
+  min-width: 100%;
 }
 
 .head-text {
@@ -64,8 +70,18 @@ a {
 }
 
 .section__header {
-  font-size: 2.5rem;
+  margin: 0;
+  font-size: 2.5em;
   font-weight: 500;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+
+.section__subheader {
+  margin: 0;
+  margin-bottom: 1em;
+  font-size: 1.25em;
+  font-weight: 400;
   align-self: flex-start;
   justify-self: flex-start;
 }
