@@ -4,7 +4,7 @@ import styles from "../../styles/sections/Contact.module.scss";
 
 const Contact = () => {
   return (
-    <section className="app__container">
+    <section className="app__container" id="contact">
       <h1 className="section__header">Contact</h1>
       <h3 className="section__subheader">Let's talk!</h3>
       <div className={styles.form__container}>

@@ -20,14 +20,43 @@
     min-width: 100%;
     justify-content: space-between;
 
+    .hamburger {
+      background: none;
+      border: none;
+      padding: none;
+      cursor: pointer;
+    }
+
     .logo {
       font-family: var(--font-logo);
       font-size: 2rem;
     }
   }
 
-  .nav__links {
-    
+  .nav__link__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    // justify-content: flex-start;
+    min-width: 100%;
+    justify-content: space-evenly;
+
+    .nav__links {
+      font-size: 2em;
+    }
+
+    .socials__container {
+
+      
+
+      .email {
+
+      }
+
+      .socials__icons {
+
+      }
+    }
   }
 
 
@@ -41,11 +70,6 @@
   position: relative;
   z-index: 1;
 
-  .side__nav {
-    // position: absolute;
-    background: white;
-
-  }
 }
 
 

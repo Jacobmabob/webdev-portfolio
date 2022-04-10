@@ -3,7 +3,7 @@ import styles from "../../styles/sections/About.module.scss";
 
 const About = () => {
   return (
-    <section className="app__container">
+    <section className="app__container" id="about">
       <h1 className="section__header">About</h1>
       <div className={styles.about__container}>
         <div className="flex__item">

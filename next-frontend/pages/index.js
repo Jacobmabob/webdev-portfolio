@@ -21,7 +21,6 @@ export async function getStaticProps() {
 
   let projects = await client.fetch(query)
     .then((data) => {
-      console.log(data)
       return data
     })
 

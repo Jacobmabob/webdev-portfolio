@@ -8,10 +8,9 @@ import Card from "../Card";
 
 const Projects = ({ projectsArray }) => {
 
-  console.log(projectsArray)
 
   return (
-    <section className="app__container">
+    <section className="app__container" id="projects">
       <h1 className="section__header">Projects</h1>
       <div className={styles.projects__container}>
         {projectsArray.map((project, index) => (
