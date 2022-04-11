@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import client from '../client'
-import styles from '../styles/Home.module.scss'
 
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar/Navbar'
 
 import Hero from '../components/sections/Hero'
 import About from '../components/sections/About'

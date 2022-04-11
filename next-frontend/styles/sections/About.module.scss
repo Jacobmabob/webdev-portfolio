@@ -3,13 +3,22 @@
     flex: 1;
     display: flex;
     min-width: 100%;
-    flex-direction: column;
+    flex-direction: row;
+    font-size: 1.4em;
+    line-height: 1.6;
+
+    // @include breakpoint(tablet) {
+    //     flex-direction: column;
+    //   }
 }
 
 .bio__container {
+    // padding: 0 5em;
+    
 
 }
 .skills__container {
+    // padding: 0 5em;
 
     ul {
         // margin: 0;

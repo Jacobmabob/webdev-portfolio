@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Navbar.module.scss";
+import styles from "../../styles/Navbar.module.scss";
 
 import { motion, useCycle } from "framer-motion";
 

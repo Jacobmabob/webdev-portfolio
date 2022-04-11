@@ -7,21 +7,30 @@
   position: fixed;
   z-index: 1;
   width: 100%;
-  padding: 1rem 4rem;
+  padding: 1rem 6rem;
 
-  background: var(--secondary-color);
+  // background: var(--secondary-color);
   // opacity: 0.9;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 
   .nav__header {
     display: flex;
     min-width: 100%;
     justify-content: space-between;
 
-    .hamburger {
-      background: none;
+    .hamburger__wrapper {
+      // padding: .4em;
+    }
+
+    .hamburger__btn {
+      height: 60px;
+      width: 60px;
+      padding: 0.2em;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      color: var(--lightGray-color);
       border: none;
       padding: none;
       cursor: pointer;
@@ -30,10 +39,12 @@
     .logo {
       font-family: var(--font-logo);
       font-size: 2rem;
+      color: var(--lightGray-color);
     }
   }
 
   .nav__link__container {
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -42,24 +53,65 @@
     justify-content: space-evenly;
 
     .nav__links {
-      font-size: 2em;
+      position: relative;
+      font-size: 4em;
+      font-weight: 800;
+      color: var(--white-color);
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 4px;
+        bottom: -7px;
+        right: 0;
+        width: 0;
+        background: var(--white-color);
+      }
+
+      &:hover:before {
+        width: 100%;
+        animation-direction: alternate;
+
+        -o-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
     }
 
     .socials__container {
+      color: var(--white-color);
+      margin-top: 3em;
 
-      
+      a {
+        font-size: 1.7em;
+        margin-left: 0.4em;
+        padding-bottom: 0.3em;
+
+        &:hover {
+          scale: 120%;
+        }
+      }
 
       .email {
-
+        display: flex;
+        align-items: center;
       }
 
       .socials__icons {
+        display: flex;
+        justify-content: flex-end;
 
+        > * {
+          cursor: pointer;
+          margin: 0.2em 0.4em;
+
+
+        }
       }
     }
   }
-
-
 
   @media screen and (max-width: 700px) {
     padding: 1rem 1rem;
@@ -69,8 +121,4 @@
 .nav__container {
   position: relative;
   z-index: 1;
-
 }
-
-
-

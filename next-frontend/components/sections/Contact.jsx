@@ -1,6 +1,9 @@
 import React from "react";
 import ContactForm from "../ContactForm";
 import styles from "../../styles/sections/Contact.module.scss";
+import Img from "next/image";
+import email_illustration from '../../public/email.png'
+
 
 const Contact = () => {
   return (
@@ -11,7 +14,12 @@ const Contact = () => {
         <div className="flex__item">
           <ContactForm />
         </div>
-        <div className="flex__item"></div>
+        <div className="flex__item">
+          <Img
+          src={email_illustration}
+          >
+          </Img>
+        </div>
       </div>
     </section>
   );

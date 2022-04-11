@@ -26,7 +26,6 @@ const Card = ({ projectData }) => {
 
   return (
     <div className="flex__item">
-      <div className={styles.card_wrapper}>
         <div className={styles.card}>
           <div className={styles.card__header}>
         
@@ -59,13 +58,10 @@ const Card = ({ projectData }) => {
               ))}
             </div>
             <a href="#">
-              <IconContext.Provider value={{ size: ".7em" }}>
+              <IconContext.Provider value={{ size: ".7em", color:"var(--danger-color)" }}
+              >
                 <motion.div
                   className={styles.site__link}
-                  style={{ color: "#B41825" }}
-                  whileHover={{
-                    color: "#E74B58",
-                  }}
                 >
                   <MdDoubleArrow />
                   <p>visit site</p>
@@ -74,7 +70,6 @@ const Card = ({ projectData }) => {
             </a>
           </div>
         </div>
-      </div>
     </div>
   );
 };

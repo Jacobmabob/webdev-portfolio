@@ -6,23 +6,36 @@
 
     min-width: 100%;
     // background: var(--secondary-color);
-    // color: var(--white-color);
+    color: var(--white-color);
 
     p {
         margin: 0;
     }
 
     .text__small {
-        font-size: 1.3rem;
+        font-size: 2.2em;
+        font-weight: 800;
+        opacity: .9;
     }
 
     .text__med {
-        font-size: 2rem;
+        font-size: 3em;
+        font-weight: 800;
+        opacity: .7;
     }
 
 
     span {
-        font-size: 3.5rem;
+        font-size: 7em;
+        font-weight: 800;
+    }
+
+    .button__container {
+        margin: 2em 0;
+        
+        > * {
+            margin-right: .7em;
+        }
     }
 
 

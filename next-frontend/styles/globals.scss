@@ -1,25 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;700&family=Poiret+One&family=Red+Hat+Mono:wght@300;400&family=Roboto+Mono:wght@300&family=Roboto:wght@100;300;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;700;800&family=Poiret+One&family=Red+Hat+Mono:wght@300;400&family=Roboto+Mono:wght@300&family=Roboto:wght@100;300;500&display=swap");
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+ }
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+ }
+   @else if $point == tablet {
+    @media (min-width: 50em) { @content ; }
+ }
+  @else if $point == phablet {
+    @media (min-width: 37.5em)  { @content ; }
+ }
+ @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
+
+ }
+}
 
 :root {
-  --font-base: 'Open Sans', sans-serif;
-  --font-mono: 'Red Hat Mono', monospace;
-  --font-logo: 'Poiret One', cursive;
+  --font-base: "Open Sans", sans-serif;
+  --font-mono: "Red Hat Mono", monospace;
+  --font-logo: "Poiret One", cursive;
 
   --primary-color: #edf2f8;
-  --secondary-color: #2D936C;
+  --secondary-color: #2d936c;
   --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
+  --lightGray-color: #f1efef;
+  --darkGray-color: #3b3b3b;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --danger-color: #a34040;
 
   --screen-sm: 375px;
   --screen-tablet: 768px;
   --screen-laptop: 1024px;
   --screen-desktop: 2560px;
-
-
-
 }
 
 html,
@@ -27,9 +44,14 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-base);
+  background-color: var(--lightGray-color);
+  font-size: 16px;
+
+  @include breakpoint(tablet) {
+    font-size: 14px;
+  }
 
   scroll-behavior: smooth;
-
 }
 
 a {
@@ -41,32 +63,31 @@ a {
   box-sizing: border-box;
 }
 
-
 .app__container {
   min-height: 100vh;
   width: 100%;
   margin: 0 auto;
-
-  
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  padding: 4rem 4rem;
+  padding: 5em 12em;
 
-  scroll-margin: 2.5em;
-
-  @media screen and (max-width: 800px) {
-    padding: 2rem 1rem;
-    // flex-direction: column;
+  // scroll-margin: 2.5em;
+  @include breakpoint(tablet) {
+    flex-direction: column;
   }
+
 }
 
 .flex__item {
   flex: 1;
-  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .head-text {
@@ -76,8 +97,10 @@ a {
 
 .section__header {
   margin: 0;
-  font-size: 2.5em;
-  font-weight: 500;
+  color: var(--darkGray-color);
+  border-bottom: 2px solid #cdcfc9;
+  font-size: 4em;
+  font-weight: 700;
   align-self: flex-start;
   justify-self: flex-start;
 }
@@ -89,4 +112,14 @@ a {
   font-weight: 400;
   align-self: flex-start;
   justify-self: flex-start;
+}
+
+.hero__bg {
+  background: #B79891;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #94716B, #B79891);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #94716B, #B79891); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  
+  
 }
