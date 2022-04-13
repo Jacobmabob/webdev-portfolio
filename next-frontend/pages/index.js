@@ -32,9 +32,34 @@ export async function getStaticProps() {
 }
 
 export default function Home({ projects }) {
+
+  const [navState, setNavState] = useState("transparent");
+
+  
+  // if (window !== undefined) {
+  //   document.addEventListener("scroll", () => {
+  //     document.documentElement.dataset.scroll = window.scrollY;
+  //   });
+
+  //   const storeScroll = () => {
+  //     document.documentElement.dataset.scroll = window.scrollY;
+
+  //     if (window.scrollY > 60) {
+  //       setNavState('solid')
+  //       return;
+  //     }
+  //     setNavState('transparent');
+  //   };
+
+  //   document.addEventListener("scroll", storeScroll);
+
+  //   storeScroll();
+  //   console.log(window.scrollY)
+  // }
+
   return (
     <main className='app__wrapper'>
-      <Navbar />
+      <Navbar/>
       <Hero />
       <About />
       <Projects projectsArray={projects}/>

@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import styles from "../../styles/Navbar.module.scss";
 import SideNav from "./SideNav";
 
@@ -48,9 +48,32 @@ const itemVariants = {
 const Navbar = () => {
   const [open, cycleOpen] = useCycle(false, true);
 
+  const [scrollPosition, setScrollPosition] = useState('transparent');
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    if (position > 60) {
+      setScrollPosition('opaque');
+      console.log(scrollPosition);
+      return
+    } else if (position < 60) {
+      setScrollPosition('transparent')
+      console.log(scrollPosition);
+    }
+
+};
+
+useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
+
+
   return (
     <motion.nav
-      className={styles.navbar}
+      className={`${styles.navbar} ${ scrollPosition? null : styles.navbar__body}`}
       initial={{ y: 20 }}
       animate={{ y: 0 }}
     >
@@ -87,9 +110,7 @@ const Navbar = () => {
                 key={id}
                 href={to}
                 variants={itemVariants}
-                whileHover={
-                  { scale: 1.03, transition: { duration: .1 } }
-                }
+                whileHover={{ scale: 1.03, transition: { duration: 0.1 } }}
                 whileTap={{ scale: 1 }}
                 className={styles.nav__links}
               >
@@ -105,8 +126,8 @@ const Navbar = () => {
                   <HiOutlineMail />
                   <motion.a
                     href="mailto:jacobmccarthy.dev@gmail.com"
-                    target='_blank'
-                  // whileHover={{scale: 1.02}}
+                    target="_blank"
+                    // whileHover={{scale: 1.02}}
                   >
                     jacobmccarthy.dev@gmail.com
                   </motion.a>
@@ -114,19 +135,14 @@ const Navbar = () => {
               </IconContext.Provider>
               <IconContext.Provider value={{ size: "2em" }}>
                 <div className={styles.socials__icons}>
-
                   <motion.a
                     href="https://github.com/Jacobmabob"
-                    target='_blank'
+                    target="_blank"
                     whileHover={{ scale: 1.2 }}
                   >
                     <FiGithub />
                   </motion.a>
-                  <motion.a
-                    href=""
-                    target='_blank'
-                    whileHover={{ scale: 1.2 }}
-                  >
+                  <motion.a href="" target="_blank" whileHover={{ scale: 1.2 }}>
                     <AiOutlineLinkedin />
                   </motion.a>
                 </div>
