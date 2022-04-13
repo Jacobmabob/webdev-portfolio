@@ -48,32 +48,24 @@ const itemVariants = {
 const Navbar = () => {
   const [open, cycleOpen] = useCycle(false, true);
 
-  const [scrollPosition, setScrollPosition] = useState('transparent');
+  const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
-    if (position > 60) {
-      setScrollPosition('opaque');
-      console.log(scrollPosition);
-      return
-    } else if (position < 60) {
-      setScrollPosition('transparent')
-      console.log(scrollPosition);
-    }
+    setScrollPosition(position)
+  };
 
-};
-
-useEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-        window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
-}, []);
+  }, []);
 
 
   return (
     <motion.nav
-      className={`${styles.navbar} ${ scrollPosition? null : styles.navbar__body}`}
+      className={`${styles.navbar} ${scrollPosition < 60 ? null : styles.navbar__body}`}
       initial={{ y: 20 }}
       animate={{ y: 0 }}
     >
@@ -127,7 +119,7 @@ useEffect(() => {
                   <motion.a
                     href="mailto:jacobmccarthy.dev@gmail.com"
                     target="_blank"
-                    // whileHover={{scale: 1.02}}
+                  // whileHover={{scale: 1.02}}
                   >
                     jacobmccarthy.dev@gmail.com
                   </motion.a>
@@ -142,7 +134,7 @@ useEffect(() => {
                   >
                     <FiGithub />
                   </motion.a>
-                  <motion.a href="" target="_blank" whileHover={{ scale: 1.2 }}>
+                  <motion.a href="https://www.linkedin.com/in/jacobandersonmccarthy/" target="_blank" whileHover={{ scale: 1.2 }}>
                     <AiOutlineLinkedin />
                   </motion.a>
                 </div>

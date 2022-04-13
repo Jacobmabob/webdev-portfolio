@@ -13,6 +13,10 @@
 
   font-size: 12px;
 
+  color: var(--lightGray-color);
+  transition-duration: 200ms;
+
+
   @include breakpoint(mobile) {
     font-size: 14px;
   }
@@ -26,9 +30,7 @@
     padding: 1em 2em;
   }
 
-  .navbar__body {
-    background: var(--white-color);
-  }
+
 
 
   backdrop-filter: blur(8px);
@@ -52,7 +54,7 @@
       padding: 0.2em;
       background: rgba(255, 255, 255, 0.3);
       border-radius: 50%;
-      color: var(--lightGray-color);
+      color: inherit;
       border: none;
       padding: none;
       cursor: pointer;
@@ -61,7 +63,7 @@
     .logo {
       font-family: var(--font-logo);
       font-size: 2em;
-      color: var(--lightGray-color);
+      // color: var(--lightGray-color);
     }
   }
 
@@ -78,32 +80,12 @@
       position: relative;
       font-size: 4em;
       font-weight: 800;
-      color: var(--white-color);
+      // color: var(--white-color);
 
-      &:before {
-        position: absolute;
-        content: "";
-        height: 4px;
-        bottom: -7px;
-        right: 0;
-        width: 0;
-        background: var(--white-color);
-      }
-
-      &:hover:before {
-        width: 100%;
-        animation-direction: alternate;
-
-        -o-transition: 0.4s;
-        -ms-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-      }
     }
 
     .socials__container {
-      color: var(--white-color);
+      // color: var(--white-color);
       margin-top: 3em;
 
       a {
@@ -140,4 +122,13 @@
 .nav__container {
   position: relative;
   z-index: 1;
+}
+
+.navbar__body {
+  background: var(--lightGray-color);
+  color: var(--darkGray-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  transition-duration: 200ms;
+  height: 1.2;
+
 }
