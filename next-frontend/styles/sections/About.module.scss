@@ -1,33 +1,39 @@
-.about__container {
-    // align-self: center;
-    flex: 1;
-    display: flex;
-    min-width: 100%;
-    flex-direction: row;
-    font-size: 1.4em;
-    line-height: 1.6;
+@import '../utils/_breakpoints.scss';
 
-    // @include breakpoint(tablet) {
-    //     flex-direction: column;
-    //   }
+.about__container {
+  flex: 1;
+  display: flex;
+  min-width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+
+  @include breakpoint(mobile) {
+    font-size: 16px;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 24px;
+  }
+
+  @include breakpoint(tabletXl) {
+    font-size: 26px;
+  }
+  @include breakpoint(laptop) {
+    font-size: 22px;
+  }
 }
 
 .bio__container {
-    // padding: 0 5em;
-    
-
 }
 .skills__container {
-    // padding: 0 5em;
-
-    ul {
-        // margin: 0;
-        // padding: 0;
-        -moz-column-count: 2;
-        -moz-column-gap: 20px;
-        -webkit-column-count: 2;
-        -webkit-column-gap: 20px;
-        column-count: 2;
-        column-gap: 20px;
-    }
+  ul {
+    // margin: 0;
+    // padding: 0;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+  }
 }

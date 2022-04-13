@@ -1,3 +1,5 @@
+@import './utils/_breakpoints.scss';
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -6,11 +8,25 @@
 
   position: fixed;
   z-index: 1;
-  width: 100%;
-  padding: 1rem 6rem;
+  min-width: 100%;
+  padding: 1em 1em;
 
-  // background: var(--secondary-color);
-  // opacity: 0.9;
+  font-size: 12px;
+
+  @include breakpoint(mobile) {
+    font-size: 14px;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 16px;
+  }
+
+  @include breakpoint(laptop) {
+    font-size: 18px;
+    padding: 1em 2em;
+  }
+
+
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
@@ -19,6 +35,8 @@
     display: flex;
     min-width: 100%;
     justify-content: space-between;
+    align-items: center;
+
 
     .hamburger__wrapper {
       // padding: .4em;
@@ -38,7 +56,7 @@
 
     .logo {
       font-family: var(--font-logo);
-      font-size: 2rem;
+      font-size: 2em;
       color: var(--lightGray-color);
     }
   }
@@ -85,7 +103,7 @@
       margin-top: 3em;
 
       a {
-        font-size: 1.7em;
+        font-size: 1.4em;
         margin-left: 0.4em;
         padding-bottom: 0.3em;
 
@@ -113,9 +131,6 @@
     }
   }
 
-  @media screen and (max-width: 700px) {
-    padding: 1rem 1rem;
-  }
 }
 
 .nav__container {

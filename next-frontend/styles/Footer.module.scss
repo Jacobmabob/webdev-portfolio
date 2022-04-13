@@ -1,0 +1,16 @@
+.footer__container {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+
+
+    a {
+        color: tomato;
+        cursor: pointer;
+
+        &:hover {
+            color: red;
+        }
+    }
+}

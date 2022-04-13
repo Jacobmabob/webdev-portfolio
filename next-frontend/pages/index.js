@@ -3,6 +3,7 @@ import Image from 'next/image'
 import client from '../client'
 
 import Navbar from '../components/Navbar/Navbar'
+import Footer from '../components/Footer'
 
 import Hero from '../components/sections/Hero'
 import About from '../components/sections/About'
@@ -38,6 +39,7 @@ export default function Home({ projects }) {
       <About />
       <Projects projectsArray={projects}/>
       <Contact />
+      <Footer />
     </main>
   )
 }

@@ -19,7 +19,13 @@ const Projects = ({ projectsArray }) => {
         
         
       </div>
-      <a className={styles.more__projects_link}>Check out my github</a>
+      <a className={styles.more__projects_link} 
+      href='https://github.com/Jacobmabob'
+      title='Check out my github!'
+      >
+          Check out my github
+          <span></span>
+        </a>
     </section>
   );
 };
