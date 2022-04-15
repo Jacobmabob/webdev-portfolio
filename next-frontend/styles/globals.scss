@@ -32,7 +32,6 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -50,7 +49,8 @@ a {
   align-items: center;
   flex-direction: column;
 
-  padding: 5em 2em;
+  padding: 3em 2em;
+  scroll-margin: 3em;
 
   > * {
     flex-direction: column;
@@ -58,6 +58,11 @@ a {
     @include breakpoint(laptop) {
       flex-direction: row;
     }
+    
+  }
+
+  @include breakpoint(desktop) {
+    padding: 4em 4em;
   }
   
 }
@@ -106,12 +111,12 @@ a {
     to right,
     #94716b,
     #b79891
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #94716b,
     #b79891
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );
 
   font-size: 8px;
 
@@ -119,3 +124,22 @@ a {
   //   // font-size: 9px;
   // }
 }
+
+.about__bg {
+
+
+  @include breakpoint(desktop) {
+    padding: 4em 14em;
+  }
+}
+
+.contact__bg {
+
+  justify-content: flex-start;
+  
+
+  @include breakpoint(desktop) {
+    padding: 4em 16em;
+  }
+}
+

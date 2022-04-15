@@ -19,21 +19,78 @@
     font-size: 26px;
   }
   @include breakpoint(laptop) {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
 .bio__container {
+
 }
 .skills__container {
   ul {
-    // margin: 0;
-    // padding: 0;
     -moz-column-count: 2;
     -moz-column-gap: 20px;
     -webkit-column-count: 2;
     -webkit-column-gap: 20px;
     column-count: 2;
     column-gap: 20px;
+
+    li::marker {
+      color: var(--darkGray-color);
+    }
+  }
+  
+}
+
+.img__container {
+  position: relative;
+  padding: 4em 1em;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .img__wrapper {
+    position: relative;
+
+    .about__img > span {
+      z-index: 1;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    }
+  
+    .svg__bg {
+      position: absolute;
+      z-index: 0;
+      min-width: 100%;
+      min-height: 100%;
+      top: 17px;
+      left: 15px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+
+      background: #b79891; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #94716b,
+        #b79891
+      ); 
+      background: linear-gradient(
+        to right,
+        #94716b,
+        #b79891
+      );
+      
+    }
+  }
+
+
+
+  @include breakpoint(tablet) {
+    padding: 4em 4em ;
+  }
+
+  @include breakpoint(laptop) {
+    padding: 4em 4em 4em;
   }
 }

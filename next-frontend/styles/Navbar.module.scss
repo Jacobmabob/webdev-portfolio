@@ -7,11 +7,15 @@
   align-items: center;
 
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   min-width: 100%;
-  padding: 1em 1em;
 
   font-size: 12px;
+
+  a {
+    color: var(--lightGray-colorGray-color);
+    // opacity: .5;
+  }
 
   color: var(--lightGray-color);
   transition-duration: 200ms;
@@ -27,7 +31,6 @@
 
   @include breakpoint(laptop) {
     font-size: 18px;
-    padding: 1em 2em;
   }
 
 
@@ -38,14 +41,15 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 
   .nav__header {
+    padding: 1em 1em;
+
     display: flex;
     min-width: 100%;
     justify-content: space-between;
     align-items: center;
 
-
-    .hamburger__wrapper {
-      // padding: .4em;
+    @include breakpoint(laptop) {
+      padding: 1em 2em;
     }
 
     .hamburger__btn {
@@ -63,11 +67,14 @@
     .logo {
       font-family: var(--font-logo);
       font-size: 2em;
-      // color: var(--lightGray-color);
     }
   }
 
   .nav__link__container {
+    // background: black;
+    color: var(--darkGray-color);
+    opacity: .8;
+    padding-right: 1em;
     margin-top: 2em;
     display: flex;
     flex-direction: column;
@@ -76,11 +83,15 @@
     min-width: 100%;
     justify-content: space-evenly;
 
+    @include breakpoint(tablet) {
+      color: var(--lightGray-color);
+    }
+
     .nav__links {
       position: relative;
       font-size: 4em;
       font-weight: 800;
-      // color: var(--white-color);
+      // color: var(--darkGray-color);
 
     }
 
@@ -93,9 +104,6 @@
         margin-left: 0.4em;
         padding-bottom: 0.3em;
 
-        &:hover {
-          scale: 120%;
-        }
       }
 
       .email {
@@ -130,5 +138,9 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   transition-duration: 200ms;
   height: 1.2;
+
+  a {
+    color: var(--darkGray-color);
+  }
 
 }

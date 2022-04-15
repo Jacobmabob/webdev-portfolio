@@ -2,8 +2,6 @@ import { React, useState, useEffect } from "react";
 import styles from "../../styles/Navbar.module.scss";
 import SideNav from "./SideNav";
 
-import Link from "next/link";
-
 import { CgMenu, CgClose } from "react-icons/cg";
 import { HiOutlineMail } from "react-icons/hi";
 import { AiOutlineLinkedin } from "react-icons/ai";
@@ -14,8 +12,8 @@ import { motion, useCycle, AnimatePresence } from "framer-motion";
 const links = [
   { name: "About", to: "#about", id: 1 },
   { name: "Projects", to: "#projects", id: 2 },
-  { name: "Contact", to: "#contact", id: 3 },
-  { name: "Blog", to: "#blog", id: 4 },
+  // { name: "Blog", to: "#blog", id: 3 },
+  { name: "Contact", to: "#contact", id: 4 },
 ];
 
 const sideVariants = {
@@ -100,6 +98,7 @@ const Navbar = () => {
             {links.map(({ name, to, id }) => (
               <motion.a
                 key={id}
+                onClick={cycleOpen}
                 href={to}
                 variants={itemVariants}
                 whileHover={{ scale: 1.03, transition: { duration: 0.1 } }}
@@ -134,8 +133,11 @@ const Navbar = () => {
                   >
                     <FiGithub />
                   </motion.a>
-                  <motion.a href="https://www.linkedin.com/in/jacobandersonmccarthy/" target="_blank" whileHover={{ scale: 1.2 }}>
-                    <AiOutlineLinkedin />
+                  <motion.a 
+                    href="https://www.linkedin.com/in/jacobandersonmccarthy/" 
+                    target="_blank" 
+                    whileHover={{ scale: 1.2 }}>
+                      <AiOutlineLinkedin />
                   </motion.a>
                 </div>
               </IconContext.Provider>

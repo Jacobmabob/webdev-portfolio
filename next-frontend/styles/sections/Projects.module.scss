@@ -31,13 +31,7 @@
   }
 }
 
-.more__projects_link {
-  font-size: 1.5em;
-  font-weight: 500;
-  color: var(--darkGray-color);
-  // border-bottom: 3px solid #cdcfc9;
-  cursor: pointer;
-}
+
 
 .card {
   color: #090c08;
@@ -55,6 +49,10 @@
   position: relative;
   display: block;
   // max-height: 273px;
+
+  a {
+    color: black;
+  }
 
   .image__wrapper > span {
     border-radius: 10px;
@@ -94,7 +92,7 @@
 
   h1 {
     margin-bottom: 0;
-    color: rgb(37, 34, 34);
+    color: var(--darkGray-color)
   }
 
   h3 {
@@ -134,7 +132,7 @@
       font-size: 0.6em;
     }
     @include breakpoint(desktop) {
-      font-size: 0.8em;
+      font-size: 0.7em;
     }
   }
 
@@ -179,5 +177,20 @@
       margin-bottom: 3px;
       margin-left: 2px;
     }
+  }
+}
+
+.more__projects_link {
+  font-size: 1.2em;
+  margin-bottom: 3em;
+  font-weight: 500;
+  color: var(--darkGray-color);
+  // border-bottom: 1px solid var(--darkGray-color);
+  cursor: pointer;
+  
+
+  &:hover {
+    opacity: .6;
+    border-bottom: 1px dotted var(--darkGray-color);
   }
 }

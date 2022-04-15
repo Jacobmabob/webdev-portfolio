@@ -23,7 +23,7 @@ const Card = ({ projectData }) => {
       <div className={styles.card}>
         <div className={styles.card__header}>
           <div className={styles.image__wrapper}>
-            <Img {...imageProps} layout="intrinsic" />
+            <Img {...imageProps} layout="intrinsic" alt={title}/>
           </div>
           <motion.div
             className={styles.github__link}

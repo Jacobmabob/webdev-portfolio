@@ -7,9 +7,9 @@ import email_illustration from '../../public/email.png'
 
 const Contact = () => {
   return (
-    <section className="app__container" id="contact">
-      <h1 className="section__header">Contact</h1>
-      <h3 className="section__subheader">Let's talk!</h3>
+    <section className="app__container contact__bg" id="contact">
+      <h1 className="section__header">Contact.</h1>
+      <h3 className="section__subheader">Interested in working together?<br/> Feel free to reach out to me here!</h3>
       <div className={styles.form__container}>
         <div className="flex__item">
           <ContactForm />
@@ -17,6 +17,7 @@ const Contact = () => {
         <div className="flex__item">
           <Img
           src={email_illustration}
+          alt='email illustration'
           >
           </Img>
         </div>

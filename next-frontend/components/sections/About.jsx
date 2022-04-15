@@ -1,21 +1,25 @@
 import React from "react";
 import styles from "../../styles/sections/About.module.scss";
+import Image from "next/image";
+import avatarImg from '../../public/js01.jpeg'
+import svgShape from '../../public/blob.svg'
 
 const About = () => {
   return (
-    <section className="app__container" id="about">
-      <h1 className="section__header">About</h1>
+    <section className="app__container about__bg" id="about">
+      <h1 className="section__header">About.</h1>
       <div className={styles.about__container}>
         <div className="flex__item">
           <div>
             <div className={styles.bio__container}>
-              <p>Hey! Welcome to my site. I'm Jacob and I figure this is the place where I should probably tell you a little bit about myself.
-                <br/>
-                <br/>
-                I'm a Developer, Luthier, Musician and all around tinkerer who has always loved the process of creating. From the design phase when your mind is buzzing with ideas, to struggling 
-                <br/>
-                <br/>
-                I was drawn to developement because there are no limits to what you can learn or accomplish. Just about any idea can be brought to life with some hard work and a few Google searches. 
+              <p>Hey! <br /><br />
+                I'm Jacob. I'm a Developer, Luthier, and Musician who has always had a passion for the creative process.
+                <br />
+                <br />
+                I've recently completed a Full Stack Web Developement Bootcamp at the Georgia Institue of Technology and am looking to land my first job in the field.
+                <br />
+                <br />
+                I was drawn to developement because there are no limits to what you can learn or accomplish. Just about any idea can be brought to life with some hard work and a few Google searches.
               </p>
             </div>
             <div className={styles.skills__container}>
@@ -29,11 +33,33 @@ const About = () => {
                 <li>React</li>
                 <li>MySQL</li>
                 <li>Next.js</li>
+                <li>GraphQl</li>
+                <li>Redux</li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="flex__item">Picture</div>
+        <div className="flex__item">
+          <div className={styles.img__container}>
+            <div className={styles.img__wrapper}>
+              <div className={styles.about__img}>
+                <Image
+                  src={avatarImg}
+                  layout='intrinsic'
+                  alt="pic o' me"
+                />
+              </div>
+              <div className={styles.svg__bg}>
+                {/* <Image
+                  width={700}
+                  height={700}
+                  src={svgShape}
+                  layout='intrinsic'
+                /> */}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

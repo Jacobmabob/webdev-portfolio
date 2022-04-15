@@ -9,6 +9,7 @@ import Hero from '../components/sections/Hero'
 import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
 import Contact from '../components/sections/Contact'
+import Blog from '../components/sections/Blog'
 
 
 
@@ -33,29 +34,6 @@ export async function getStaticProps() {
 
 export default function Home({ projects }) {
 
-  const [navState, setNavState] = useState("transparent");
-
-  
-  // if (window !== undefined) {
-  //   document.addEventListener("scroll", () => {
-  //     document.documentElement.dataset.scroll = window.scrollY;
-  //   });
-
-  //   const storeScroll = () => {
-  //     document.documentElement.dataset.scroll = window.scrollY;
-
-  //     if (window.scrollY > 60) {
-  //       setNavState('solid')
-  //       return;
-  //     }
-  //     setNavState('transparent');
-  //   };
-
-  //   document.addEventListener("scroll", storeScroll);
-
-  //   storeScroll();
-  //   console.log(window.scrollY)
-  // }
 
   return (
     <main className='app__wrapper'>
@@ -63,6 +41,7 @@ export default function Home({ projects }) {
       <Hero />
       <About />
       <Projects projectsArray={projects}/>
+      {/* <Blog /> */}
       <Contact />
       <Footer />
     </main>

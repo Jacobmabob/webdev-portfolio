@@ -10,8 +10,8 @@ const Projects = ({ projectsArray }) => {
 
 
   return (
-    <section className="app__container" id="projects">
-      <h1 className="section__header">Projects</h1>
+    <section className="app__container projects__bg" id="projects">
+      <h1 className="section__header">Projects.</h1>
       <div className={styles.projects__container}>
         {projectsArray.map((project, index) => (
           <Card  projectData={project} key={index} />
