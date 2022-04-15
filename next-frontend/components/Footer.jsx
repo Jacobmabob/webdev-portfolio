@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <div className={styles.footer__container}>
         <p>Created with
-        <a href='https://nextjs.org/' target='_blank'> Next.js </a> 
+        <a href='https://nextjs.org/' target='_blank' rel="noreferrer"> Next.js </a> 
         and 
-        <a href='https://www.sanity.io/' target='_blank'> Sanity.io</a>.
+        <a href='https://www.sanity.io/' target='_blank ' rel="noreferrer"> Sanity.io</a>.
         </p>
     </div>
   )

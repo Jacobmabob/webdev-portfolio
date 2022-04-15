@@ -46,7 +46,7 @@ const Hero = () => {
       // variants={headerVariants}
 
       >
-        <p className={styles.text__small}>Hi, I'm</p>
+        <p className={styles.text__small}>Hi, I&apos;m</p>
         <span>Jacob McCarthy.</span>
         <p className={styles.text__med}>Fullstack Web Developer </p>
         <p className={styles.text__small}>based in Atlanta, GA</p>
@@ -55,13 +55,14 @@ const Hero = () => {
             href='mailto:jacobmccarthy.dev@gmail.com'
             passHref={true}
             target="_blank"
+            rel="noreferrer"
           >
             <Button text='Contact me' />
 
           </Link>
           <a
             href='https://docs.google.com/document/d/1STlqHbRR9uXl5RYD15uiMD2P-JMNG7s-Helm7dT7YTY/edit?usp=sharing'
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <Button text='Resume' />
 

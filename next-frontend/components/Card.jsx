@@ -30,7 +30,7 @@ const Card = ({ projectData }) => {
             whileHover={{ scale: 1.3 }}
           >
             <IconContext.Provider value={{ size: "3em" }}>
-              <a href={codeLink} target="_blank" title='Link to the repo'>
+              <a href={codeLink} target="_blank" rel="noreferrer" title='Link to the repo'>
                 <VscGithub />
               </a>
             </IconContext.Provider>
@@ -49,7 +49,7 @@ const Card = ({ projectData }) => {
               </p>
             ))}
           </div>
-          <a href={projectLink} target="_blank">
+          <a href={projectLink} target="_blank" rel="noreferrer">
             <IconContext.Provider
               value={{ size: ".7em", color: "var(--danger-color)" }}
             >

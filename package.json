@@ -1,0 +1,7 @@
+{
+  "name": "next-frontend",
+  "private": true,
+  "scripts": {
+    "build": "cd next-frontend && npm run build"
+  }
+}

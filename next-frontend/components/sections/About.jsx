@@ -13,10 +13,10 @@ const About = () => {
           <div>
             <div className={styles.bio__container}>
               <p>Hey! <br /><br />
-                I'm Jacob. I'm a Developer, Luthier, and Musician who has always had a passion for the creative process.
+                I&apos;m Jacob. I&apos;m a Developer, Luthier, and Musician who has always had a passion for the creative process.
                 <br />
                 <br />
-                I've recently completed a Full Stack Web Developement Bootcamp at the Georgia Institue of Technology and am looking to land my first job in the field.
+                I&apos;ve recently completed a Full Stack Web Developement Bootcamp at the Georgia Institue of Technology and am looking to land my first job in the field.
                 <br />
                 <br />
                 I was drawn to developement because there are no limits to what you can learn or accomplish. Just about any idea can be brought to life with some hard work and a few Google searches.
@@ -45,7 +45,7 @@ const About = () => {
               <div className={styles.about__img}>
                 <Image
                   src={avatarImg}
-                  layout='intrinsic'
+                  layout="intrinsic"
                   alt="pic o' me"
                 />
               </div>
